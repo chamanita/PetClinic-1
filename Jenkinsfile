@@ -47,7 +47,7 @@ pipeline {
                         SCANNER_HOME = tool 'sonarscanner'
                     }
                     steps {
-                        withSonarQubeEnv (installationName: 'sonarqube') {
+                        withSonarQubeEnv (installationName: 'SonarQube') {
                             sh "${SCANNER_HOME}/bin/sonar-scanner -Dproject.settings=sonar-project.properties"
                         }
                     }
