@@ -24,7 +24,7 @@ pipeline {
         stage('Code Checkout'){
             steps {
                 echo "code checkout"
-                git credentialsId: 'github-creds', url: 'https://github.com/gopishank/PetClinic.git'
+                git credentialsId: 'github-creds', url: 'https://github.com/chamanita/PetClinic-1.git'
             }
         }
         
