@@ -63,7 +63,7 @@ pipeline {
             steps {
                 sh '''
                 POM_VERSION=`grep "<version>" pom.xml | head -1 | awk -F "-" '{print $1}' | tail -c 6`
-                curl -u admin:admin POST "http://ec2-18-207-239-251.compute-1.amazonaws.com:8081/service/rest/v1/components?repository=PetClinic" -H "accept: application/json" -H "Content-Type: multipart/form-data" -F "maven2.groupId=org.SampleOrg" -F "maven2.artifactId=petclinic" -F "maven2.version=${POM_VERSION}" -F "maven2.asset1=@${WORKSPACE}/target/petclinic.war" -F "maven2.asset1.extension=war"
+                curl -u admin:admin POST "http://ec2-3-237-33-177.compute-1.amazonaws.com:8081/service/rest/v1/components?repository=PetClinic" -H "accept: application/json" -H "Content-Type: multipart/form-data" -F "maven2.groupId=org.SampleOrg" -F "maven2.artifactId=petclinic" -F "maven2.version=${POM_VERSION}" -F "maven2.asset1=@${WORKSPACE}/target/petclinic.war" -F "maven2.asset1.extension=war"
                 '''
             }
         }
