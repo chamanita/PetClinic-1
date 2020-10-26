@@ -11,12 +11,12 @@
        ignore_errors: yes
 
      - name: To Remove old war files
-       shell: rm -rf /opt/apache-tomcat-8.5.57/webapps/petclinic*
+       shell: rm -rf /opt/apache-tomcat-8.5.58/webapps/petclinic*
 
      - name: To copy war file
        copy:
          src: /home/ubuntu/jenkins/workspace/Pipeline_PetClinic/target/petclinic.war
-         dest: /opt/apache-tomcat-8.5.57/webapps/
+         dest: /opt/apache-tomcat-8.5.58/webapps/
 
      - name: To START apache tomcat
-       shell: nohup /opt/apache-tomcat-8.5.57/bin/catalina.sh start
+       shell: nohup /opt/apache-tomcat-8.5.58/bin/catalina.sh start
